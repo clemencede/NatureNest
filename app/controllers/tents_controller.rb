@@ -1,5 +1,5 @@
 class TentsController < ApplicationController
-  before_action :set_tent, only: %i[show destroy]
+  before_action :set_tent, only: %i[show destroy update]
 
   def index
     @tents = Tent.all
@@ -12,6 +12,11 @@ class TentsController < ApplicationController
   end
 
   def edit; end
+
+  def update
+    @tent.update!(tent_params)
+    redirect_to tents_path
+  end
 
   def create
     @tent = Tent.new(tent_params)
