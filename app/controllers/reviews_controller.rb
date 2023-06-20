@@ -3,12 +3,9 @@ class ReviewsController < ApplicationController
     @review = Review.new(review_params)
     @tent = Tent.find(params[:tent_id])
     @review.tent = @tent
-    if @review.save
-      redirect_to tent_path(@tent)
-    else
-      @booking = Booking.new
-      render "tents/show", status: :unprocessable_entity
-    end
+    @review.user = current_user
+    @review.save
+    redirect_to tent_path(@tent)
   end
 
   def destroy
