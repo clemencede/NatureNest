@@ -1,0 +1,13 @@
+<div class="background">
+  <div class="bg-white rounded p-3 shadow">
+    <h3>Create a new tent</h3>
+    <%= simple_form_for @tent do |f| %>
+      <%= f.input :name, placeholder: 'The best tent you never seen before' %>
+      <%= f.input :description, placeholder: 'Give us more information'%>
+      <%# <%= f.input :photo_url, as: :file %> 
+      <%= f.submit class: 'btn btn-ghost'%>
+    <% end %>
+  </div>
+</div>
+
+ <%# link_to "create a tent", tent_path(@tent) %>
