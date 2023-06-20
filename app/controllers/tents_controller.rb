@@ -15,7 +15,9 @@ class TentsController < ApplicationController
 
   def create
     @tent = Tent.new(tent_params)
-    if @tent.save
+    @tent.photo_url = "https://source.unsplash.com/random/?tent"
+    @tent.user = User.last
+    if @tent.save!
       redirect_to tent_path(@tent)
     else
       render :new, status: :unprocessable_entity
@@ -24,7 +26,7 @@ class TentsController < ApplicationController
 
   def destroy
     @tent.destroy
-    redirect_to tent_path, status: :see_other
+    redirect_to tents_path, status: :see_other
   end
 
   private
@@ -34,6 +36,6 @@ class TentsController < ApplicationController
   end
 
   def tent_params
-    params.require(:tent).permit(:name, :decription, :user_id, :address, :price)
+    params.require(:tent).permit(:name, :description, :user_id, :address, :photo_url, :price)
   end
 end
