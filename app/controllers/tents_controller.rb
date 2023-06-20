@@ -5,13 +5,13 @@ class TentsController < ApplicationController
     @tents = Tent.all
   end
 
-  def show
-    @tent = Tent.new(@tent)
-  end
+  def show; end
 
   def new
     @tent = Tent.new
   end
+
+  def edit; end
 
   def create
     @tent = Tent.new(tent_params)
