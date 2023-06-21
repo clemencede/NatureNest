@@ -80,3 +80,24 @@
 .profilepicture .profileinfos {
   padding: 16px;
 }
+
+.btn, .btn-book {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: green;
+  transition: background 0.3s ease;
+  object-position: center;
+}
+
+.btn-book:hover {
+  background: grey;
+  color: white;
+}
+
+.carousel-inner {
+  background-image: url("https://source.unsplash.com/random/?tent");
+  background-position: center;
+  background-size: cover;
+  height: 20vh;
+}
