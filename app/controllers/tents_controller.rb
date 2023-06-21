@@ -5,7 +5,9 @@ class TentsController < ApplicationController
     @tents = Tent.all
   end
 
-  def show; end
+  def show
+    @user = @tent.user
+  end
 
   def new
     @tent = Tent.new
@@ -21,7 +23,7 @@ class TentsController < ApplicationController
   def create
     @tent = Tent.new(tent_params)
     @tent.photo_url = "https://source.unsplash.com/random/?tent"
-    @tent.user = User.last
+    # @tent.user = User.last
     if @tent.save!
       redirect_to tent_path(@tent)
     else
