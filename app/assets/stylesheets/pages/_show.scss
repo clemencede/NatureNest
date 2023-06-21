@@ -32,11 +32,6 @@
   transition: background 0.3s ease;
 }
 
-.btn-flat:hover {
-  background: #4D04C4;
-  color: white;
-}
-
 .carousel-item active {
   object-fit: cover;
   object-position: center;
@@ -87,17 +82,48 @@
   border-radius: 4px;
   background: green;
   transition: background 0.3s ease;
+  position: bottom;
+}
+
+.btn, .btn-price {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: green;
+  transition: background 0.3s ease;
+  object-position: center;
+  display: block;
+  margin-left: 100px;
+  margin-right: 100px;
   object-position: center;
 }
 
-.btn-book:hover {
-  background: grey;
-  color: white;
-}
 
 .carousel-inner {
   background-image: url("https://source.unsplash.com/random/?tent");
   background-position: center;
   background-size: cover;
   height: 20vh;
+  display: inline-grid;
+  align-content: space-between;
+}
+
+a .edit {
+  margin-left: 200px;
+  margin-top: 20px;
+}
+
+.flash {
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  border-radius: 4px;
+  margin: 8px;
+}
+
+.flash-success {
+  border: 2px solid #1EDD88;
 }
