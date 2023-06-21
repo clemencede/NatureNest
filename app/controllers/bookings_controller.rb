@@ -11,7 +11,11 @@ class BookingsController < ApplicationController
   end
 
   def create
+    @user = User.find(params[:user_id])
+    @tent = Tent.find(params[:tent_id])
     @booking = Booking.new(booking_params)
+    @booking.user = @user
+    @booking.tent = @tent
     if @booking.save!
       redirect_to booking_path(@booking)
     else

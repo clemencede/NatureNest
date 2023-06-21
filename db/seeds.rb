@@ -37,3 +37,9 @@ tent2 = Tent.create!(name: "oceanhouse", description: "Amazing view on the ocean
 tent3 = Tent.create!(name: "riverhouse", description: "Amazing view on the river", address: "31 river street", price: 90, user: patrick, photo_url: "https://source.unsplash.com/random/?tent")
 
 puts "Finished tent!"
+
+puts "create a booking"
+booking1 = Booking.create!(user: patrick, tent: tent1)
+booking2 = Booking.create!(user: patrick, tent: tent2)
+booking3 = Booking.create!(user: patrick, tent: tent3)
+puts "finished booking seeds!"
