@@ -9,6 +9,28 @@
     <h3 class="mb-0">My Tent</h3>
     <%= link_to "Create a new tent", new_tent_path, class: "btn btn-flat" %>
   </div>
+
+<form novalidate="novalidate" class="simple_form search" action="/" accept-charset="UTF-8" method="get">
+  <div class="search-form-control form-group">
+    <input class="form-control string required" type="text" name="search[query]" id="search_query" />
+    <button name="button" type="submit" class="btn btn-flat">
+      <i class="fas fa-search"></i> Search
+    </button>
+  </div>
+</form>
+
+
+<div class="card-trip">
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+  <div class="card-trip-infos">
+    <div>
+      <h2> Tent name </h2>
+      <p> Disponibility</p>
+    </div>
+    <h2 class="card-trip-pricing">Price</h2>
+  </div>
+</div>
+
   <div class="row">
     <% @tents.each do |tent| %>
       <div class="co-12 col-sm-6 col-md-4 mb-3">
