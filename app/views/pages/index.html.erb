@@ -1,6 +1,5 @@
 Index
 
-
 <div class="cover mb-4 d-flex align-items-center justify-content-center">
   <div class="text-center text-white">
     <h1>Find all of our tents</h1>
@@ -48,31 +47,58 @@ Index
 
 <br>
 
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2906.7359558104113!2d6.611358675739092!3d43.23599537931519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12cec5d7daf6ea21%3A0xfe0350d3960532b7!2sCamping%20la%20Rouill%C3%A8re%20%7C%20Ramatuelle%20%7C%20Saint%20Tropez!5e0!3m2!1sfr!2sfr!4v1687344798765!5m2!1sfr!2sfr" width="350" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2906.7359558104113!2d6.611358675739092!3d43.23599537931519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12cec5d7daf6ea21%3A0xfe0350d3960532b7!2sCamping%20la%20Rouill%C3%A8re%20%7C%20Ramatuelle%20%7C%20Saint%20Tropez!5e0!3m2!1sfr!2sfr!4v1687344798765!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+<br>
+<div class="card-tent">
+  <img class="d-block w-100" src=<%= @tent.photo_url %>>
+  <div class="card-tent-infos">
+    <div>
+      <h2>Tent 1 </h2>
+      <p>Short description here!</p>
+    </div>
+    <h2 class="card-tent-pricing">200€</h2>
+  </div>
+</div>
 
 <br>
 
+<div class="card-tent">
+<img class="d-block w-100" src=<%= @tent.photo_url %>>
+  <div class="card-tent-infos">
+    <div>
+      <h2>Tent 2</h2>
+      <p>Short description here!</p>
+    </div>
+    <h2 class="card-tent-pricing">200€</h2>
+  </div>
+</div>
+<br>
+
+<div class="card-tent">
+  <img class="d-block w-100" src=<%= @tent.photo_url %>>
+  <div class="card-tent-infos">
+    <div>
+      <h2>Tent 3</h2>
+      <p>Short description here!</p>
+    </div>
+    <h2 class="card-tent-pricing">200€</h2>
+  </div>
+</div>
+
   <div class="row">
     <% @tents.each do |tent| %>
-      <%= link_to tent_path(tent), class:"text-decoration-none" do %>
-        <div class="card-tent">
-          <img class="d-block w-100" src="https://source.unsplash.com/random/?tent/">
-          <div class="card-tent-infos">
-            <div>
-              <h2><%= tent.name %>3</h2>
-              <p><%= tent.address %></p>
-              <p><%= tent.description %></p>
-            </div>
-            <h2 class="card-tent-pricing"><%= tent.price %>€</h2>
+      <div class="co-12 col-sm-6 col-md-4 mb-3">
+        <%= link_to tent_path(tent), class:"text-decoration-none" do %>
+          <div class="card-category" data-aos="zoom-in">
+            <%= tent.name %>
+            <%= tent.address %>
+            <%= tent.description %>
+            <%= tent.price %>
           </div>
-
         <% end %>
-       <%# <%= link_to "book a tent", tent_booking_path %>
       </div>
-
-        </div>
-      <% end %>
-
     <% end %>
   </div>
 </div>
+
