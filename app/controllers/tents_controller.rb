@@ -22,6 +22,7 @@ class TentsController < ApplicationController
 
   def create
     @tent = Tent.new(tent_params)
+    @tent.user = current_user
     @tent.photo_url = "https://source.unsplash.com/random/?tent"
     # @tent.user = User.last
     if @tent.save!
