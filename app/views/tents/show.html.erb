@@ -1,7 +1,55 @@
+
 <div>
 <h1><%= @tent.name %></h1>
  <%= image_tag(@tent.photo_url) %>
  <%# <%= cl_image_tag @article.photo.key, height: 300, width: 400, crop: :fill %>
+
+<h1 class="titremomo"><strong><%=@tent.name %></strong></h1>
+
+<%# carousel %>
+
+
+    <div class="carousel-inner">
+      <div><a class="btn btn-price" href="#"> <%= @tent.price %> </a></div>
+      <div> <a class = "edit" href="#">Edit <i class="fas fa-pencil-alt"></i></a></div>
+    </div>
+
+
+<%# <!-- card info --> %>
+    <div class= "profilepicture">
+            <img class="profilepicture" src=<%= @user.profilepic %> alt="Third slide">
+            <div class= "profileinfos">
+            <h2> <%= @tent.user.first_name%></h2>
+            <p> <%= @tent.description%></p>
+            </div>
+              <div class="notification-actions">
+      <a href="#">Edit <i class="fas fa-pencil-alt"></i></a>
+
+</div>
+    </div>
+
+<div class="flash flash-success alert alert-dismissible fade show" role="alert">
+  <span><strong>Yay!</strong> 🎉 This tent is available !</span>
+  <a data-bs-dismiss="alert" aria-label="Close">
+    <i class="fas fa-times"></i>
+  </a>
 </div>
 
-<%=  %>
+<div class="profilepicture">
+    <h2>Choose Your Options</h2>
+    <p>Product description with <strong>relevant info</strong> only.</p>
+    <a href="#">Edit <i class="fas fa-pencil-alt"></i></a>
+</div>
+
+<div class="profilepicture">
+    <h2>Reviews</h2>
+    <p>Product description with <strong>relevant info</strong> only.</p>
+    <a href="#">Edit <i class="fas fa-pencil-alt"></i></a>
+
+</div>
+    </div>
+
+
+<div>
+<a class="btn btn-book" href="#">Book Your Tent</a>
+</div>
