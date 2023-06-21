@@ -1,10 +1,15 @@
+
+<div>
+<h1><%= @tent.name %></h1>
+ <%= image_tag(@tent.photo_url) %>
+ <%# <%= cl_image_tag @article.photo.key, height: 300, width: 400, crop: :fill %>
+
 <h1 class="titremomo"><strong><%=@tent.name %></strong></h1>
 
 <%# carousel %>
 
 
     <div class="carousel-inner">
-
       <div><a class="btn btn-price" href="#"> <%= @tent.price %> </a></div>
       <div> <a class = "edit" href="#">Edit <i class="fas fa-pencil-alt"></i></a></div>
     </div>
@@ -19,6 +24,7 @@
             </div>
               <div class="notification-actions">
       <a href="#">Edit <i class="fas fa-pencil-alt"></i></a>
+
 </div>
     </div>
 
@@ -41,6 +47,8 @@
     <a href="#">Edit <i class="fas fa-pencil-alt"></i></a>
 
 </div>
+    </div>
+
 
 <div>
 <a class="btn btn-book" href="#">Book Your Tent</a>

@@ -32,7 +32,6 @@
   transition: background 0.3s ease;
 }
 
-
 .carousel-item active {
   object-fit: cover;
   object-position: center;
@@ -96,7 +95,9 @@
   display: block;
   margin-left: 100px;
   margin-right: 100px;
+  object-position: center;
 }
+
 
 .carousel-inner {
   background-image: url("https://source.unsplash.com/random/?tent");
@@ -125,5 +126,9 @@ a .edit {
 
 .flash-success {
   border: 2px solid #1EDD88;
+<<<<<<< HEAD
 }
 
+=======
+}
+>>>>>>> 3ceffa1bddf7ec6455990bb41b21652c120b4454
