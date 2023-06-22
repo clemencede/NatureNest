@@ -42,13 +42,31 @@
 }
 
 .booking {
-  padding: 4vmin;
   h2 {
     color: green;
     font-size: large;
-}
+  }
+  padding: 4vmin;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  margin: 10px;
 }
 
 .btn_delete {
   text-align: center;
+}
+
+.titredash {
+  text-align: center;
+  font-size: 22px;
+  color: green;
+  margin: 4vmin;
+}
+
+.booking {
+
+  display: inline-grid;
 }
