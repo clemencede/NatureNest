@@ -3,8 +3,9 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    @user.profilepic = "https://source.unsplash.com/random/?person"
-    @user = User.last
+    # @user.profilepic = "https://source.unsplash.com/random/?person"
+    # @user = User.last
+    # @user = current_user
     if @user.save!
       redirect_to user_path(@user)
     else
@@ -15,7 +16,6 @@ class UsersController < ApplicationController
   def show; end
 
   def update
-    raise
     if @user.update(user_params)
       redirect_to user_path(@user), notice: "User information updated successfully."
     else
@@ -26,7 +26,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:first_name, :email, :password, :profilepic, :last_name, :description)
+    params.require(:user).permit(:first_name, :email, :password, :photo, :last_name, :description)
   end
 
   def set_user
