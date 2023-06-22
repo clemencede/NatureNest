@@ -13,6 +13,7 @@ Tent.destroy_all
 User.destroy_all
 
 puts "create user"
+
 patrick = User.create!(first_name: "Patrick", email: "patrick.amazing@gmail.com", password: "patrick")
 patrick_file = URI.open("https://res.cloudinary.com/dnow6fswp/image/upload/v1687437515/pexels-streetwindy-3628700_elpyh9.jpg")
 patrick.photo.attach(io: patrick_file, filename: "patrick.png", content_type: "image/jpg")
@@ -21,6 +22,11 @@ josephine = User.create!(first_name: "josephine", email: "josephine.amazing@gmai
 josephine_file = URI.open("https://res.cloudinary.com/dnow6fswp/image/upload/v1687437519/pexels-arianna-jade%CC%81-4006576_rfe3az.jpg")
 josephine.photo.attach(io: josephine_file, filename: "josephine.png", content_type: "image/jpg")
 josephine.save!
+
+patrick = User.create!(first_name: "Patrick", email: "patrick.amazing@gmail.com", password: "patrick", description: "blablabla", last_name: "dupont")
+patrick.photo.attach(io: cloudinary_person, filename: "nes.png", content_type: "image/png")
+patrick.save!
+
 puts "Finished user!"
 
 puts "create tent"
