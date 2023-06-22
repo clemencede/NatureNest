@@ -18,8 +18,8 @@
   </a>
 </div>
 
-<div class="user">
-    <label for="user">Choose Your Option:</label>
+<div class="rev">
+    <label class="label" for="user"><strong>Choose Your Option:</strong></label>
 
 <select name="pets" id="options">
     <option value="Please choose an option">--Please choose an option--</option>
@@ -36,20 +36,20 @@
   <h2> <%= @tent.user.first_name%></h2>
     <p> <%= @tent.description%></p>
   </div>
+  <div> <a class = "bouton" href="#">Edit <i class="fas fa-pencil-alt"></i></a></div>
 </div>
 
 <!-- reviews -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <div class ="reviewss">
-<span class="heading">Reviews</span>
+<span class="heading"><strong>Reviews</strong></span>
 <span class="fa fa-star checked"></span>
 <span class="fa fa-star checked"></span>
 <span class="fa fa-star checked"></span>
 <span class="fa fa-star checked"></span>
 <span class="fa fa-star"></span>
 <p>4.1 average based on 254 reviews.</p>
-<hr style="border:3px solid #f1f1f1">
 </div>
 
 
