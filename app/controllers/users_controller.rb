@@ -17,7 +17,7 @@ class UsersController < ApplicationController
   private
 
   def tent_params
-    params.require(:user).permit(:first_name, :email, :password, :profilepic)
+    params.require(:user).permit(:first_name, :email, :password, :profilepic, :last_name, :description)
   end
 
   def set_user
