@@ -2,7 +2,12 @@ class TentsController < ApplicationController
   before_action :set_tent, only: %i[show destroy update]
 
   def index
-    @tents = Tent.all
+    @query = params[:query]
+    if @query.present?
+      @tents = Tent.where("name ILIKE :query OR description ILIKE :query OR address ILIKE :query", query: "%#{@query}%")
+    else
+      @tents = Tent.all
+    end
   end
 
   def show

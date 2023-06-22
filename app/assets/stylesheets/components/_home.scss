@@ -18,7 +18,7 @@
 }
 
 .btn-ghost {
-  color: #4A4A4A;
+  color: green;
   border: 1px solid #4A4A4A;
   border-radius: 50px;
   font-weight: lighter;
@@ -31,8 +31,15 @@
   opacity: 1;
 }
 
+.center-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 16px;
+}
+
 .btn-ghost-v {
-  color: #4A4A4A;
+  color: green;
   border: 1px solid #4A4A4A;
   border-radius: 50px;
   font-weight: lighter;
