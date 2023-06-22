@@ -4,3 +4,47 @@
   padding-top: 4vmin;
 }
 
+.notification-actions {
+  display: inline-flex;
+  margin: 20px;
+}
+
+.card_info_user {
+  overflow: hidden;
+  height: 120px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+
+.profilepic {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+  height: 12vh;
+  width: 20vw;
+  border-radius: 50px;
+}
+
+.profileinfos {
+  margin: 20px;
+}
+
+.edit-link {
+  margin: 10px;
+}
+
+.booking {
+  padding: 4vmin;
+  h2 {
+    color: green;
+    font-size: large;
+}
+}

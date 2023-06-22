@@ -14,9 +14,18 @@ class UsersController < ApplicationController
 
   def show; end
 
+  def update
+    raise
+    if @user.update(user_params)
+      redirect_to user_path(@user), notice: "User information updated successfully."
+    else
+      render :show, status: :unprocessable_entity
+    end
+  end
+
   private
 
-  def tent_params
+  def user_params
     params.require(:user).permit(:first_name, :email, :password, :profilepic, :last_name, :description)
   end
 
