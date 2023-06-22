@@ -31,7 +31,7 @@ h1{
   color: white;
   padding: 8px 24px;
   border-radius: 4px;
-  background: #670BFF;
+  background: #34895d;
   transition: background 0.3s ease;
 }
 
@@ -44,6 +44,7 @@ h1{
 .titremomo {
   font-size: 32px;
   text-align: center;
+  margin-bottom: 20px;
 }
 
 .profilepicture {
@@ -82,25 +83,29 @@ h1{
   padding: 16px;
 }
 
-.btn, .btn-book {
+.btn.btn-book {
   color: white;
   padding: 8px 24px;
   border-radius: 4px;
-  background: green;
   transition: background 0.3s ease;
-  position: bottom;
-  margin: 0
+  background: green;
+  object-position: center;
+  display: block;
+  object-position: center;
+  margin-top: -16px;
 }
 
-.btn, .btn-price {
+.btn.btn-price {
   color: white;
   padding: 8px 24px;
   border-radius: 4px;
   transition: background 0.3s ease;
+  background: green;
   object-position: center;
   display: block;
   object-position: center;
   margin-top: 130px;
+  opacity: 80%;
 }
 
 
@@ -141,11 +146,12 @@ a {
   border: 2px solid #1EDD88;
 }
 
-label {
-  font-family: sans-serif;
-  font-size: 1rem;
+.label {
   padding-right: 10px;
   align-items: center;
+  margin: 21px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
 }
 
 select {
@@ -169,12 +175,22 @@ select {
   font-size: 16px;
   font-weight: bold;
   margin: 0;
-  font-family: 'Outfit', sans-serif;
+  font-family: Arial;
   margin: 20px;
 }
 
 select {
   margin-right: 50px;
+}
+
+.rev {
+text-align: center;
+}
+
+#options {
+margin-left: 44px;
+font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
 }
 
 label {
@@ -187,41 +203,6 @@ h2 {
   padding-right: 10px;
 }
 
-// .user {
-//   display: flex;
-//   align-items: center;
-//   margin-bottom: 8px;
-//   background: white;
-//   padding: 8px 16px;
-//   border: 1px solid rgb(235,235,235);
-//   font-family: 'Outfit', sans-serif;
-// }
-
-// .user .content {
-//   flex-grow: 1;
-//   padding: 0 24px;
-// }
-
-// .notification p {
-//   margin: 0;
-//   line-height: 1.4;
-// }
-
-// .user small {
-//   color: #999999;
-//   font-weight: bold;
-// }
-// .user .content{
-//   opacity: 0;
-//   display: flex;
-//   transition: ease .3s;
-// }
-
-// .user .content a {
-//   color: #999999;
-//   margin-left: 16px;
-//   font-size: 14px;
-// }
 
 * {
   box-sizing: border-box;
@@ -231,12 +212,12 @@ body {
   font-family: Arial;
   margin: 0 auto; /* Center website */
   max-width: 800px; /* Max width */
-  padding: 20px;
 }
 
 .heading {
-  font-size: 25px;
+  font-size: 18px;
   margin-right: 25px;
+
 }
 
 .fa {
@@ -334,5 +315,29 @@ body {
 }
 
 .reviewss {
+  margin: 10px;
+  text-align: center;
+  padding: 1px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+.rev {
+  overflow: hidden;
+  height: 120px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: block;
+  align-items: center;
   margin: 20px;
+  border-radius: 20px;
+  padding: 5px;
+}
+
+.strong {
+  position: center;
+}
+
+.navbar.navbar-expand-sm.navbar-light.navbar-lewagon {
+  margin-bottom: 20px;
 }

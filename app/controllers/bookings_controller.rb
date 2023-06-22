@@ -19,7 +19,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.tent = @tent
     if @booking.save!
-      redirect_to tent_path(@tent), notice: "The bookmark was successfully created."
+      redirect_to dashboard_path(@dashboard), notice: "The booking was successfully created."
     else
       render :new, status: :unprocessable_entity
     end
@@ -29,12 +29,12 @@ class BookingsController < ApplicationController
 
   def update
     @booking.update!(booking_params)
-    redirect_to bookings_path
+    redirect_to tent_path(@tent)
   end
 
   def destroy
     @booking.destroy
-    redirect_to tents_path, status: :see_other
+    redirect_to dashboard_path(@dashboard), status: :see_other
   end
 
   private

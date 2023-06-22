@@ -1,15 +1,30 @@
 <div class="center"><h1>My dashboard</h1></div>
+<div class="edit-link">
+<%= link_to edit_user_registration_path, class: "edit-link" do %> Edit <i class="fas fa-pencil-alt"></i>
+<% end %>
+</div>
 
 <div class= "card_info_user">
-<a href="#">Edit <i class="fas fa-pencil-alt"></i></a>
   <div class="notification-actions">
-    <a href="#">Edit <i class="fas fa-pencil-alt"></i></a>
-      <img class="profilepicture" src=<%= current_user.profilepic = "https://source.unsplash.com/random/?person" %>>
+      <img class="profilepic" src=<%= current_user.profilepic = "https://source.unsplash.com/random/?person" %>>
+         </div>
          <div class= "profileinfos">
             <h2> <%= current_user.first_name%></h2>
             <h2> <%= current_user.last_name%></h2>
-            <p> <%= current_user.email%></p>
-            <p> <%= current_user.description%></p>
+            <h2> <%= current_user.email%></h2>
+            <h2> <%= current_user.description%></h2>
           </div>
   </div>
-</div>
+        <div class= "card_info_user">
+          <div class="booking">
+            <p><% current_user.bookings.each do |booking| %></p>
+                <h2> Your bookings : </h2>
+                <%= booking.tent.name %>
+                <%= booking.tent.photo_url %>
+                <% end %>
+            <p> <% current_user.bookings.each do |booking| %>
+                <%= link_to "Delete a booking", booking_path(booking), class: "btn btn-info", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+                <% end %>
+          </div>
+        </div>
+<i></i>
