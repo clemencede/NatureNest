@@ -15,7 +15,7 @@
       <div class = "card-category">
           <%= booking.tent.name %>
           <%= booking.tent.description %>
-           <%# <%= link_to "Delete", bookmark_path(bookmark), class: "btn btn-info", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+          <%= link_to "Delete", dashboard_path(@dashboard), class: "btn btn-info", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
       </div>
     <% end %>
   </div>
