@@ -7,17 +7,19 @@ class BookingsController < ApplicationController
   def show; end
 
   def new
+    @tent = Tent.find(params[:tent_id])
     @booking = Booking.new
   end
 
   def create
-    @user = User.find(params[:user_id])
+    #@user = User.find(params[:user_id])
+    #@user = current.user
     @tent = Tent.find(params[:tent_id])
     @booking = Booking.new(booking_params)
-    @booking.user = @user
+    @booking.user = current_user
     @booking.tent = @tent
     if @booking.save!
-      redirect_to booking_path(@booking)
+      redirect_to tent_path(@tent), notice: "The bookmark was successfully created."
     else
       render :new, status: :unprocessable_entity
     end

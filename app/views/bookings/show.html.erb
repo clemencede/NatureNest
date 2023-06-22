@@ -7,3 +7,15 @@
     <%# <% end %>
     </div>
 </div>
+
+<h1>Here's your booking:</h1>
+
+  <div class="cards">
+    <% @tent.bookings.each do |booking| %>
+      <div class = "card-category">
+          <%= booking.tent.name %>
+          <%= booking.tent.description %>
+           <%# <%= link_to "Delete", bookmark_path(bookmark), class: "btn btn-info", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+      </div>
+    <% end %>
+  </div>
