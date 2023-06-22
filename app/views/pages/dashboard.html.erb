@@ -1,3 +1,14 @@
-<h1>My dashboard</h1>
+<div class="center"><h1>My dashboard</h1></div>
 
-
+<div class= "card_info_user">
+  <div class="notification-actions">
+    <a href="#">Edit <i class="fas fa-pencil-alt"></i></a>
+      <img class="profilepicture" src=<%= current_user.profilepic %>>
+         <div class= "profileinfos">
+            <h2> <%= current_user.first_name%></h2>
+            <h2> <%= current_user.last_name%></h2>
+            <p> <%= current_user.email%></p>
+            <p> <%= current_user.description%></p>
+          </div>
+  </div>
+</div>
