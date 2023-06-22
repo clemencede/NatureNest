@@ -16,8 +16,9 @@ cloudinary_tent = URI.open("https://source.unsplash.com/random/?tent")
 cloudinary_person = URI.open("https://source.unsplash.com/random/?person")
 
 puts "create user"
-patrick = User.create!(first_name: "Patrick", email: "patrick.amazing@gmail.com", password: "patrick")
+patrick = User.create!(first_name: "Patrick", email: "patrick.amazing@gmail.com", password: "patrick", description: "blablabla", last_name: "dupont")
 patrick.photo.attach(io: cloudinary_person, filename: "nes.png", content_type: "image/png")
+patrick.save!
 puts "Finished user!"
 
 puts "create tent"
