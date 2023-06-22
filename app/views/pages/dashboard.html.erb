@@ -8,25 +8,24 @@
   <div class="notification-actions">
       <img class="profilepic" src=<%= current_user.profilepic = "https://source.unsplash.com/random/?person" %>>
          </div>
-         <div class= "profileinfos">
+          <div class= "profileinfos">
             <h2> <%= current_user.first_name%></h2>
             <h2> <%= current_user.last_name%></h2>
 
             <p> <%= current_user.email%></p>
             <p> <%= current_user.description%></p>
-            <p>  <% current_user.bookings.each do |booking| %></p>
-                <p> Your bookings : </p>
-                <%= booking.tent.name %>
-                <%= booking.tent.photo_url %>
-                <% end %>
-            <p> <% current_user.bookings.each do |booking| %>
-                <%= link_to "Delete a booking", booking_path(booking), class: "btn btn-info", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
-                <% end %>
-
-            <h2> <%= current_user.email%></h2>
-            <h2> <%= current_user.description%></h2>
+          </div>
+          <div>
 
           </div>
   </div>
 </div>
-<i></i>
+
+<% current_user.bookings.each do |booking| %>
+<p> Your bookings : </p>
+  <div class="card-booking">
+    <%= booking.tent.name %>
+    <%= cl_image_tag booking.tent.photo.key %>
+    <%= link_to "Delete a booking", booking_path(booking), class: "btn btn-info", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+  </div>
+<% end %>
