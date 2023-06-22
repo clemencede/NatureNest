@@ -22,9 +22,11 @@
                 <%= booking.tent.name %>
                 <%= booking.tent.photo_url %>
                 <% end %>
+                <div class="btn_delete">
             <p> <% current_user.bookings.each do |booking| %>
                 <%= link_to "Delete a booking", booking_path(booking), class: "btn btn-info", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
                 <% end %>
+                </div>
           </div>
         </div>
 <i></i>
