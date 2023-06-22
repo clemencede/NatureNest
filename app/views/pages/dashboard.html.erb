@@ -6,27 +6,28 @@
 
 <div class= "card_info_user">
   <div class="notification-actions">
-      <img class="profilepic" src=<%= current_user.profilepic = "https://source.unsplash.com/random/?person" %>>
-         </div>
-         <div class= "profileinfos">
-            <h2> <%= current_user.first_name%></h2>
-            <h2> <%= current_user.last_name%></h2>
-            <h2> <%= current_user.email%></h2>
-            <h2> <%= current_user.description%></h2>
-          </div>
+  <% if current_user.photo.attached? %>
+    <%= cl_image_tag current_user.photo.key, height: 20, width: 40, crop: :fill %>
+    <% else %>
+    <img src="https://res.cloudinary.com/dzwtudz1z/image/upload/v1678893370/favicon_ayxzgj.png" alt="">
+    <% end %>
+
   </div>
-        <div class= "card_info_user">
-          <div class="booking">
-            <p><% current_user.bookings.each do |booking| %></p>
-                <h2> Your bookings : </h2>
-                <%= booking.tent.name %>
-                <%= booking.tent.photo_url %>
-                <% end %>
-                <div class="btn_delete">
-            <p> <% current_user.bookings.each do |booking| %>
-                <%= link_to "Delete a booking", booking_path(booking), class: "btn btn-info", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
-                <% end %>
-                </div>
-          </div>
-        </div>
-<i></i>
+  <div class= "profileinfos">
+    <h2> <%= current_user.first_name%></h2>
+    <h2> <%= current_user.last_name%></h2>
+    <h2> <%= current_user.email%></h2>
+    <h2> <%= current_user.description%></h2>
+  </div>
+  </div>
+    <div class= "card_info_user">
+      <div class="booking">
+        <p><% current_user.bookings.each do |booking| %></p>
+        <h2> Your bookings : </h2>
+        <%= booking.tent.name %>
+        <%= cl_image_tag booking.tent.photo.key %>
+        <div class="btn_delete">
+        <%= link_to "Delete a booking", booking_path(booking), class: "btn btn-info", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+        <% end %>
+      </div>
+    </div>
