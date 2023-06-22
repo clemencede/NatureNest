@@ -23,10 +23,6 @@ josephine_file = URI.open("https://res.cloudinary.com/dnow6fswp/image/upload/v16
 josephine.photo.attach(io: josephine_file, filename: "josephine.png", content_type: "image/jpg")
 josephine.save!
 
-patrick = User.create!(first_name: "Patrick", email: "patrick.amazing@gmail.com", password: "patrick", description: "blablabla", last_name: "dupont")
-patrick.photo.attach(io: cloudinary_person, filename: "nes.png", content_type: "image/png")
-patrick.save!
-
 puts "Finished user!"
 
 puts "create tent"
