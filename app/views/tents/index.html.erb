@@ -10,6 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300&family=Outfit:wght@600&display=swap" rel="stylesheet">
 <div class="container py-2">
 
+<br>
 
 <form novalidate="novalidate" class="simple_form search" action="/" accept-charset="UTF-8" method="get">
   <div class="search-form-control form-group">
@@ -21,31 +22,18 @@
 </form>
 <div class= "calendar">
   <h1> Please enter your avaibilities </h1>
-  <div class = "box">
-    <div class="one">
       <label for="start">Start date:</label>
-
       <input type="date" id="start" name="trip-start"
             value="2023-06-21"
             min="2023-06-21" max="2023-12-31">
-    </div>
-
-    <div class = "two">
         <label for="end">End date:</label>
 
         <input type="date" id="start" name="trip-start"
               value="2023-06-22"
               min="2023-06-21" max="2023-12-31">
-    </div>
-
-    <div class= "three">
-        <a class="btn btn-ghost" href="#"> Search </a>
-    </div>
-  </div>
+        <a class="btn btn-ghost-v" href="#"> Search </a>
 </div>
 
-<br>
-<br>
  <%= link_to "Create a new tent", new_tent_path, class: "btn btn-flat" %>
  <br>
   <div class="row">
@@ -66,4 +54,3 @@
     <% end %>
   </div>
 </div>
-

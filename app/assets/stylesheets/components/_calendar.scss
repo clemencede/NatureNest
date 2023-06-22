@@ -2,6 +2,8 @@ Calendar
 label {
   display: block;
   font: 1rem 'Fira Sans', sans-serif;
+  margin: 100;
+  padding: 1em;
 }
 
 input,
@@ -12,21 +14,4 @@ label {
 .calendar h1 {
 font-family: 'Outfit', sans-serif;
 font-size: 25px;
-}
-
-.box {
-display: flex;
-justify-content: flex-start;
-}
-
-.one {
-  flex: 1 1 auto;
-}
-
-.two {
-  flex: 1 1 auto;
-}
-
-.three {
-  flex: 1 1 auto;
 }
