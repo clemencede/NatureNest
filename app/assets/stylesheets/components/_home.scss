@@ -1,0 +1,33 @@
+// Specific CSS for your home-page
+.titre {
+  color: green;
+  font-size: 36px;
+  padding-top: 20px;
+}
+
+.search-form-control .btn {
+  // position: absolute;
+  // top: 8px;
+  // bottom: 8px;
+  // right: -90px;
+  margin: 0;
+}
+
+.right-btn {
+  margin-right: 0;
+}
+
+.btn-ghost {
+  color: #4A4A4A;
+  border: 1px solid #4A4A4A;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  width: 130px;
+}
+
+.btn-ghost:hover {
+  opacity: 1;
+}
