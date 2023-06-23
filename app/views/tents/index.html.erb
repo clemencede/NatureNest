@@ -27,7 +27,7 @@
     </div>
   </form>
 
-  <br> <h3> If you have a tent and want to rent it, create it: </h3>
+  <br> <p> If you have a tent and want to rent it, create it: </p>
   <%# <div class= "calendar">
     <h1> Please enter your avaibilities </h1>
       <label for="start">Start date:</label>
@@ -59,10 +59,10 @@
               <% if tent.photo.attached? %>
                 <p><%= cl_image_tag tent.photo.key, class: "image-tent" %></p>
               <% end %>
-            <h2 class="card-tent-pricing"><%= tent.price %>€</h2>
+              <h2 class="card-tent-pricing"><%= tent.price %>€</h2>
+            </div>
           </div>
-        <% end %>
-      </div>
+        </div>
+      <% end %>
     <% end %>
-  </div>
 </div>
