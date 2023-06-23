@@ -53,10 +53,17 @@
   display: flex;
   align-items: center;
   margin: 10px;
+  width: 100%;
+  h3 {
+    color: maroon;
+    font-size: medium;
+    padding: 4vmin;
+  }
 }
 
 .btn_delete {
   text-align: center;
+  width: 100px;
 }
 
 .titredash {
@@ -66,7 +73,6 @@
   margin: 4vmin;
 }
 
-.booking {
-
+.bookings {
   display: inline-grid;
 }
