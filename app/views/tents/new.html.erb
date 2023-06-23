@@ -2,14 +2,12 @@
   <div class="bg-white rounded p-3 shadow">
     <h3>Create a new tent</h3>
     <%= simple_form_for @tent do |f| %>
-      <%= f.input :name, placeholder: 'The best tent you never seen before' %>
+      <%= f.input :name, placeholder: 'The name of your tent' %>
       <%= f.input :description, placeholder: 'Give us more information'%>
       <%= f.input :price, placeholder: 'The price has to be in euro (€)'%>
-      <%= f.input :address, placeholder: '21 Rue Haxo, Massalia'%>
+      <%= f.input :address, placeholder: 'The address'%>
       <%# <%= f.input :photo_url, as: :file %>
       <%= f.submit class: 'btn btn-ghost'%>
     <% end %>
   </div>
 </div>
-
- <%# link_to "create a tent", tent_path(@tent) %>
