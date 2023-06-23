@@ -1,20 +1,18 @@
 
 <div>
-<h1 class="titremomo"><strong><%=@tent.name.capitalize %></strong></h1>
+  <h1 class="titremomo"><strong><%=@tent.name.capitalize %></strong></h1>
 
-<%# carousel %>
-<div class="padding">
+  <div class="padding">
 
-   <div class="edit-right"> <%= link_to edit_tent_path, class: 'bouton' do %> Edit <i class="fa_icon fas fa-pencil-alt"></i>
+    <div class="edit-right"> <%= link_to edit_tent_path, class: 'bouton' do %> Edit <i class="fa_icon fas fa-pencil-alt"></i>
   <% end %>
-    <div class="carousel-inner">
+      <div class="carousel-inner">
+      <% if @tent.photo.attached? %>
       <%= cl_image_tag @tent.photo.key, class: "photo-show" %>
       <a class="btn btn-price" href="#"> <strong><%= @tent.price%>€ </strong></a>
-  </div>
-    <div class="carousel-inner">
-      <div><a class="btn btn-price" href="#"> <strong><%= @tent.price%>€ </strong></a>
+      <% end %>
       </div>
-    </div>
+  </div>
 </div>
 
 <div class="flash flash-success alert alert-dismissible fade show" role="alert">

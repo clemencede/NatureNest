@@ -51,7 +51,9 @@
               <h2><%= tent.name %></h2>
               <p><%= tent.address %></p>
               <p><%= tent.description %></p>
-              <p><%= cl_image_tag tent.photo.key, class: "image-tent" %></p>
+              <% if tent.photo.attached? %>
+                <p><%= cl_image_tag tent.photo.key, class: "image-tent" %></p>
+              <% end %>
             <h2 class="card-tent-pricing"><%= tent.price %>€</h2>
           </div>
         <% end %>
