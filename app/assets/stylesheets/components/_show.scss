@@ -105,19 +105,17 @@ h1{
   object-position: center;
   display: block;
   object-position: center;
-  margin-top: 130px;
   opacity: 80%;
 }
 
 
 .carousel-inner {
-  background-image: url("https://source.unsplash.com/random/?tent");
   background-position: center;
   background-size: cover;
-  height: 20vh;
   display: inline-grid;
   align-content: space-between;
   border-radius: 20px;
+  justify-content: center;
 }
 
 .bouton {
@@ -350,4 +348,14 @@ body {
 
 .padding {
   padding: 4vmin;
+}
+
+.photo-show {
+  background-position: center;
+  background-size: cover;
+  height: 30vh;
+  display: inline-grid;
+  align-content: space-between;
+  border-radius: 20px;
+  width: 100vw;
 }
