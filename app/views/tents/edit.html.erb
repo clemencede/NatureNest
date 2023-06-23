@@ -1,0 +1,28 @@
+<h1 class="h1-form">What do you want to change ?</h1>
+<div class="form">
+  <%= form_with model: @tent do |f| %>
+    <div>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </div>
+
+    <div>
+    <%= f.label :price %>
+    <%= f.number_field :price %>
+    </div>
+
+    <div>
+    <%= f.label :address %>
+    <%= f.text_field :address %>
+    </div>
+
+    <div>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+    </div>
+
+    <div>
+    <%= f.submit %>
+    </div>
+  <% end %>
+</div>

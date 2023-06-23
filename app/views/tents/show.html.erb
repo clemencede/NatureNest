@@ -4,10 +4,13 @@
 
 <%# carousel %>
 <div class="padding">
-  <div class="edit-right"> <a class = "bouton" href="#">Edit <i class="fas fa-pencil-alt"></i></a></div>
-  <div class="carousel-inner">
-    <div><a class="btn btn-price" href="#"> <strong><%= @tent.price%>€ </strong></a></div>
+  <div class="edit-right"> <%= link_to edit_tent_path, class: 'bouton' do %> Edit <i class="fa_icon fas fa-pencil-alt"></i>
+  <% end %>
   </div>
+    <div class="carousel-inner">
+      <div><a class="btn btn-price" href="#"> <strong><%= @tent.price%>€ </strong></a>
+      </div>
+    </div>
 </div>
 
 <div class="flash flash-success alert alert-dismissible fade show" role="alert">
@@ -18,42 +21,43 @@
 </div>
 
 <div class="rev">
-    <label class="label" for="user"><strong>Choose Your Option:</strong></label>
-
-<select name="pets" id="options">
-    <option value="Please choose an option">--Please choose an option--</option>
-    <option value="Sheets">Sheets</option>
-    <option value="Cooker">Cooker</option>
-    <option value="Bring My Pet">Bring My Pet</option>
-    <option value="Cleaning Service">Cleaning Service</option>
-</select>
+  <label class="label" for="user"><strong>Choose Your Option:</strong></label>
+  <select name="pets" id="options">
+      <option value="Please choose an option">--Please choose an option--</option>
+      <option value="Sheets">Sheets</option>
+      <option value="Cooker">Cooker</option>
+      <option value="Bring My Pet">Bring My Pet</option>
+      <option value="Cleaning Service">Cleaning Service</option>
+  </select>
 </div>
 
 <div class="user">
   <img src=  <%= @user.profilepic = "https://source.unsplash.com/random/?person"%> />
- <div class="user-infos">
-  <h2> <%= @tent.user.first_name%></h2>
-    <p> <%= @tent.description%></p>
+  <div class="user-infos">
+    <h2> <%= @tent.user.first_name%></h2>
+      <p> <%= @tent.description%></p>
   </div>
-  <div> <a class = "bouton" href="#">Edit <i class="fas fa-pencil-alt"></i></a></div>
+  <div>
+   <div class="edit-right"> <%= link_to edit_tent_path, class: 'bouton' do %> Edit <i class="fa_icon fas fa-pencil-alt"></i>
+   </div>
+  <% end %>
+  </div>
 </div>
 
 <!-- reviews -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <div class ="reviewss">
-<span class="heading"><strong>Reviews</strong></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star"></span>
-<p>4.1 average based on 254 reviews.</p>
+  <span class="heading"><strong>Reviews</strong></span>
+  <span class="fa fa-star checked"></span>
+  <span class="fa fa-star checked"></span>
+  <span class="fa fa-star checked"></span>
+  <span class="fa fa-star checked"></span>
+  <span class="fa fa-star"></span>
+  <p>4.1 average based on 254 reviews.</p>
 </div>
 
 
 <div>
 <%= link_to "Book Your Tent", new_tent_booking_path(@tent), class: "btn btn-book" %>
-</div>
-
 </div>
