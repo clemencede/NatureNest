@@ -1,5 +1,5 @@
 class TentsController < ApplicationController
-  before_action :set_tent, only: %i[show destroy update]
+  before_action :set_tent, only: %i[show destroy update edit]
 
   def index
     @query = params[:query]
