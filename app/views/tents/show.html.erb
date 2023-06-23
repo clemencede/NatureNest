@@ -4,8 +4,12 @@
 
 <%# carousel %>
 <div class="padding">
-  <div class="edit-right"> <%= link_to edit_tent_path, class: 'bouton' do %> Edit <i class="fa_icon fas fa-pencil-alt"></i>
+
+   <div class="edit-right"> <%= link_to edit_tent_path, class: 'bouton' do %> Edit <i class="fa_icon fas fa-pencil-alt"></i>
   <% end %>
+    <div class="carousel-inner">
+      <%= cl_image_tag @tent.photo.key, class: "photo-show" %>
+      <a class="btn btn-price" href="#"> <strong><%= @tent.price%>€ </strong></a>
   </div>
     <div class="carousel-inner">
       <div><a class="btn btn-price" href="#"> <strong><%= @tent.price%>€ </strong></a>
