@@ -1,15 +1,14 @@
 
 <div>
-<h1 class="titremomo"><strong><%=@tent.name %></strong></h1>
+<h1 class="titremomo"><strong><%=@tent.name.capitalize %></strong></h1>
 
 <%# carousel %>
-
-
-    <div class="carousel-inner">
-      <div><a class="btn btn-price" href="#"> <strong><%= @tent.price%>€ </strong></a></div>
-      <div> <a class = "bouton" href="#">Edit <i class="fas fa-pencil-alt"></i></a></div>
-    </div>
-
+<div class="padding">
+  <div class="edit-right"> <a class = "bouton" href="#">Edit <i class="fas fa-pencil-alt"></i></a></div>
+  <div class="carousel-inner">
+    <div><a class="btn btn-price" href="#"> <strong><%= @tent.price%>€ </strong></a></div>
+  </div>
+</div>
 
 <div class="flash flash-success alert alert-dismissible fade show" role="alert">
   <span><strong>Yay!</strong> 🎉 This tent is available !</span>
@@ -31,7 +30,7 @@
 </div>
 
 <div class="user">
-  <img src=  <%=     @user.profilepic = "https://source.unsplash.com/random/?person"%> />
+  <img src=  <%= @user.profilepic = "https://source.unsplash.com/random/?person"%> />
  <div class="user-infos">
   <h2> <%= @tent.user.first_name%></h2>
     <p> <%= @tent.description%></p>
