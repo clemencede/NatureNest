@@ -46,6 +46,11 @@
     color: green;
     font-size: large;
   }
+  h3 {
+    color: maroon;
+    font-size: medium;
+    padding: 4vmin;
+  }
   padding: 4vmin;
   overflow: hidden;
   background: white;
@@ -53,10 +58,13 @@
   display: flex;
   align-items: center;
   margin: 10px;
+  width: 100%;
+  height: 120px;
 }
 
 .btn_delete {
   text-align: center;
+  padding: 4vmin;
 }
 
 .titredash {
@@ -66,7 +74,8 @@
   margin: 4vmin;
 }
 
-.booking {
-
-  display: inline-grid;
+.bookings {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
 }
